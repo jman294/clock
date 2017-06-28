@@ -7,29 +7,30 @@ body {
   height: 200px;
   width: 200px;
   box-sizing: border-box;
-  border: 10px solid black;
+  border: 5px solid black;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
 .hand {
   background: black;
   width: 95;
   height: 1px;
-  position: absolute;
-  left: 100;
-  top: 100;
+  position: relative;
+  left: 50%;
+  top: 50%;
   transform-origin: 0% 50%;
-  transform: rotate(270deg);
 }
 
 #hour {
-  width: 85;
+  width: 75;
 }
 
 #minute {
-  width: 75;
+  width: 85;
 }
 
 #second {
   width: 88;
+  background-color: red;
 }

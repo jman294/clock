@@ -16,20 +16,14 @@
       let minuteHand = document.getElementById('minute')
       let hourHand = document.getElementById('hour')
 
-      let currentSecond = 0
-      let currentMinute = 12
-      let currentHour = 6
       setInterval(function () {
-        currentSecond = (currentSecond + 1) % 60
-        secondHand.style.transform = 'rotate('+currentSecond*6+'deg)'
-        if (currentSecond % 60 === 0) {
-          minuteHand.style.transform = 'rotate('+currentMinute*6+'deg)'
-          currentMinute += 1
-        }
-        if (currentMinute % 60 === 0) {
-          hourHand.style.transform = 'rotate('+currentHour*30+'deg)'
-          currentHour += 1
-        }
+        let now = new Date()
+        let degrees = now.getSeconds()*6-90
+        secondHand.style.transform = 'rotate('+degrees+'deg)'
+        degrees = now.getMinutes()*6-90
+        minuteHand.style.transform = 'rotate('+degrees+'deg)'
+        degrees = now.getHours()*30-90
+        hourHand.style.transform = 'rotate('+degrees+'deg)'
       }, 1000)
     </script>
   </body>
