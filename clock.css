@@ -26,11 +26,11 @@ body {
 .hand {
   background: black;
   width: 95;
-  height: 1px;
-  position: relative;
+  height: 2px;
+  position: fixed;
   left: 50%;
   top: 50%;
-  transform-origin: 0% 50%;
+  transform-origin: 5% 50%;
 }
 
 #hour {
@@ -38,11 +38,11 @@ body {
 }
 
 #minute {
-  width: 85;
+  width: 100;
 }
 
 #second {
-  width: 88;
+  width: 95;
   background-color: red;
 }
 
